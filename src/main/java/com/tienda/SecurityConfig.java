@@ -65,7 +65,7 @@ protected void configure (HttpSecurity http) throws Exception {
 http.authorizeRequests ()
 .antMatchers("/persona", "login")
 .hasRole ("ADMIN")
-.antMatchers("/personasN", "/persona", "/", "/login")
+.antMatchers("/personaN", "/persona", "/", "/login")
 .hasAnyRole("USER", "VENDEDOR", "ADMIN")
 .anyRequest().authenticated()
 .and()
